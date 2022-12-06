@@ -7,6 +7,7 @@
 :root {
   --primary: hsl(158, 36%, 37%);
   --text: hsl(30, 38%, 92%);
+  --alert: hsl(7, 93%, 58%);
 }
 
 body {
@@ -33,7 +34,7 @@ body {
 
 .addToCart {
   display: flex;
-  width: 90%;
+  width: 100%;
   justify-content: center;
 }
 
@@ -55,7 +56,7 @@ body {
 }
 
 /* desktop */
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 591px) {
   .flex-row {
     display: flex;
     flex-direction: row;
@@ -66,58 +67,91 @@ body {
   .image {
     width: 100%;
     max-width: 1000px;
-    height: auto;
-    background-image: url(./assets/images/image-product-desktop.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+    object-fit: cover;
+    object-position: 50% 30%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
 
   .desc {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    text-align: left;
   }
 
   .card {
+    padding: 0;
+    padding-right: 1em;
     background-color: antiquewhite;
     max-width: 1000px;
-    height: 50vh;
+    height: 500px;
+    border-radius: 20px;
   }
 
-  .card {
-    border-radius: 20px;
+  .fiscal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
   }
 }
 
 /* Mobile */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 590px) {
   * {
     font-size: 20px;
   }
 
-  .image {
+  .card {
+    padding: 0;
     width: 100%;
-    max-width: 1000px;
-    height: 30vh;
-    background-image: url('./images/image-product-mobile.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+    min-width: 400px;
+
+    border-radius: 20px;
+    background-color: antiquewhite;
+  }
+
+  .image {
+    object-fit: cover;
+    width: 100%;
+    height: 40vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
   .flex-col {
     display: flex;
     flex-direction: column;
+    gap: 1em;
+  }
+
+  .desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
   }
 
   .fiscal {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1em;
+    padding: 1em;
   }
 
-  .desc {
+  .addToCart {
+    width: 90%;
     padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .desc p, .desc h1 {
+    padding: .2em .8em;
   }
 }
