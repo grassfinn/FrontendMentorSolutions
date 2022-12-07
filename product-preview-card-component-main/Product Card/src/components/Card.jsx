@@ -9,8 +9,7 @@ export default function ProductCard(props) {
   }
 
   return (
-    <section className="">
-      <div className="flex-col flex-row card">
+      <section className="flex-col flex-row card">
         <img src={props.img} alt="" className="image" />
         {/* <div className="image">&nbsp;</div> */}
         <div className="desc">
@@ -27,7 +26,6 @@ export default function ProductCard(props) {
             </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }
