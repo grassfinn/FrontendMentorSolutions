@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="img">
+          <!-- picture needs img for reference -->
+          <picture>
+            <!-- source allows to change images based off the medias option -->
+            <source media="(min-width:756px)" srcset="/images/illustration-woman-online-desktop.svg">
+            <source srcset="/images/illustration-woman-online-mobile.svg" >
+
+            <img
+              class="girl"
+              src="./images/illustration-woman-online-desktop.svg"
+              alt="Girl working on the computer"
+            />
+          </picture>
+          <img class="box" src="./images/illustration-box-desktop.svg" />
+
+      </div>
+      <section class="card flex">
+        <div class="flex-col">
+          <h1>FAQ</h1>
+
+          <details class="dropdown">
+            <summary class="question">
+              How many team members can I invite?
+            </summary>
+            <p>
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p>
+          </details>
+
+          <details class="dropdown">
+            <summary class="question">
+              What is the maximum file upload size?
+            </summary>
+            <p class="answer">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </details>
+
+          <details class="dropdown">
+            <summary class="question">How do I reset my password?</summary>
+            <p class="answer">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p>
+          </details>
+
+          <details class="dropdown">
+            <summary class="question">Can I cancel my subscription?</summary>
+            <p class="answer">
+              Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </p>
+          </details>
+
+          <details class="dropdown">
+            <summary class="question">
+              Do you provide additional support?
+            </summary>
+            <p class="answer">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

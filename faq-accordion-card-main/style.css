@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-400);
+}
+html,
+body {
+  height: 100vh;
+}
+
+/* TODO */
+/* Gradient Background color */
+/* Transition with JS */
+/* Make React Component */
+
+:root {
+  --font-400: 'Kumbh Sans', sans-serif;
+  --font-700: 'Kumbh Sans', sans-serif;
+  ---primary: hsl(273, 75%, 66%);
+  --secondary: hsl(240, 73%, 65%);
+  --font-dark: hsl(240, 6%, 50%);
+  --font-very-dark: hsl(237, 12%, 33%);
+  --divider: hsl(240, 5%, 91%);
+}
+
+summary {
+  font-family: var(--font-700);
+}
+
+summary:focus{
+  font-weight: 700;
+
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(---primary);
+}
+
+.card {
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+/* https://stackoverflow.com/questions/56758098/how-to-position-detail-marker-to-come-after-summary */
+details > summary {
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: '►';
+}
+details[open] summary:after {
+  content: '▼';
+}
+
+.card {
+  background-color: white;
+  display: flex;
+}
+
+.img {
+  position: relative;
+}
+
+.box, .girl {
+    position: absolute;
+    z-index: 1;
+}
+
+/* Mobile */
+@media screen and (max-width: 755px) {
+
+  .card {
+    border-radius: 20px;
+    height: 80vh;
+    padding: 1.5em;
+    max-width: 300px;
+  }
+
+  .box {
+    width: 25%;
+    transform: translate(50px, -35px);
+    display: none;
+  }
+  .girl {
+    width: 65%;
+    transform: translate(48px, -95px);
+  }
+
+  h1 {
+    margin-top: 1.5em;
+    align-self: center;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 756px) {
+
+  details {
+    max-width: 310px;
+  }
+  h1 {
+    text-align: left;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .card {
+    border-radius: 20px;
+    /* height: 80vh; */
+    padding: 2em;
+    width: 900px;
+    height: 700px;
+    max-width: 1000px;
+
+  }
+  p {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+  .box {
+    width: 15%;
+    transform: translate(10px, 310px);
+  }
+  .girl {
+    transform: translateY(40%);
+  }
+}
